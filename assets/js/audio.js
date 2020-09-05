@@ -1,4 +1,4 @@
-// Establish tempo 60 bpm
+// Establish bpm
 Tone.Transport.bpm.value = 50;
 
 // Initialize transport
