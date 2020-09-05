@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>audiocrack</title>
-    <meta name="description" content="an algorithmic composition">
-    <meta name="twitter:title" content="audiocrack">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660">
-    <meta name="twitter:image" content="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660">
+    <meta name="description" content="algorithmic compositions">
     <meta name="twitter:description" content="an algorithmic composition">
+    <meta name="twitter:image" content="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660">
+    <meta property="og:image" content="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="audiocrack">
     <link rel="icon" type="image/jpeg" sizes="1000x1000"
         href="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660">
     <link rel="icon" type="image/jpeg" sizes="1000x1000"
@@ -23,25 +23,61 @@
 </head>
 
 <body style="text-align: center;">
-    <div class="container"><img
-            class="img-fluid d-flex d-xl-flex justify-content-center mx-auto mx-sm-auto mx-md-auto mx-lg-auto justify-content-xl-center align-items-xl-center mx-xl-auto"
-            data-toggle="tooltip" data-bs-tooltip="" src="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660"
-            loading="lazy" style="margin-top: 2em;width: 200px;height: 200px;text-align: center;">
-        <button class="btn btn-dark btn-sm" id="start" type="button" style="margin: 0.1em;"
-            onclick="reproducir()">Start</button>
-        <button class="btn btn-dark btn-sm" id="stop" type="button" style="margin: 0.1em;"
-            onclick="detener()">Stop</button>
-        <div>
-            <h2 class="text-lowercase text-dark" style="margin-top: 1em;">audiocrack</h2>
-            <p class="text-dark"><strong>made with love by</strong><br><a
-                    href="https://github.com/ekosistema"><strong>ekosistema</strong></a></p>
+    <!-- Start: 2 Rows 1+4 Columns -->
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="display-4 text-lowercase text-dark"
+                        style="margin-top: 1em;margin-bottom: 0.5em;font-size: 40px;"><strong>audiocrack</strong></h1>
+                    <p class="lead" style="line-height: 20px;"><strong>algorithmic compositions</strong><br><strong>made
+                            with love</strong></p>
+                </div>
+            </div>
+            <div class="row" style="height: 300px;">
+                <div class="col-md-3 col-xl-3"></div>
+                <div class="col-md-3">
+                    <div><img
+                            class="img-fluid d-flex d-xl-flex justify-content-center mx-auto mx-sm-auto mx-md-auto mx-lg-auto justify-content-xl-center align-items-xl-center mx-xl-auto"
+                            data-toggle="tooltip" data-bs-tooltip=""
+                            src="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660" loading="lazy"
+                            style="margin-top: 2em;width: 150px;height: 150px;text-align: center;">
+                        <button class="btn btn-dark btn-sm" id="startSalty" type="button" style="margin: 0.1em;"
+                            onclick="audioSalty(true)">Start</button>
+                        <button class="btn btn-dark btn-sm" id="stopSalty" type="button" style="margin: 0.1em;"
+                            onclick="detenerAudio()">Stop</button></div>
+                    <h4 style="margin-top: 1em;line-height: 25px;">salty</h4>
+                </div>
+                <div class="col-md-3">
+                    <div><img
+                            class="img-fluid d-flex d-xl-flex justify-content-center mx-auto mx-sm-auto mx-md-auto mx-lg-auto justify-content-xl-center align-items-xl-center mx-xl-auto"
+                            data-toggle="tooltip" data-bs-tooltip=""
+                            src="assets/img/overflow.jpg?h=980d60b58050bebcff9d3f7a16b86660" loading="lazy"
+                            style="margin-top: 2em;width: 150px;height: 150px;text-align: center;">
+                        <button class="btn btn-dark btn-sm" id="startSweet" type="button" style="margin: 0.1em;"
+                            onclick="audioSweet(true)">Start</button>
+                        <button class="btn btn-dark btn-sm" id="stopSweet" type="button" style="margin: 0.1em;"
+                            onclick="detenerAudio()">Stop</button></div>
+                    <h4 style="margin-top: 1em;">sweet</h4>
+                </div>
+                <div class="col-md-3 col-xl-3"></div>
+                <div class="col">
+                    <div class="d-xl-flex justify-content-xl-center align-items-xl-end">
+                        <p class="text-dark" style="margin-top: 5em;"><strong>an audio project by</strong><br><a
+                                href="https://github.com/ekosistema"><strong>ekosistema</strong></a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- End: 2 Rows 1+4 Columns -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-init.js?h=de81e5c47df32ab5ad05d8b1819c4c2a"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.45/Tone.js"></script>
-    <script src="assets/js/audio.js?h=11d5a105aee0820adad6ff373f3b7142"></script>
+    <script src="assets/js/audioSalty.js?h=350bc29d4a60a8e325d21900f4506967"></script>
+    <script src="assets/js/audioSweet.js?h=e27aec6af5cea261a74a95db6f32b403"></script>
+    <script src="assets/js/audioStop.js"></script>
 </body>
 
 </html>
