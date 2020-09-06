@@ -6,9 +6,6 @@
     // Initialize transport
     Tone.Transport.start();
 
-    // Initialize audio context
-    Tone.context = new AudioContext();
-
     // Assign random number
     var random = Math.random();
 
@@ -27,6 +24,8 @@
             document
                 .getElementById("startSalty")
                 .addEventListener("click", async () => {
+                    // Initialize audio context
+                    Tone.context = new AudioContext();
                     Tone.start();
                     console.log("audio started");
                 });
@@ -109,6 +108,8 @@
             document
                 .getElementById("startSweet")
                 .addEventListener("click", async () => {
+                    // Initialize audio context
+                    Tone.context = new AudioContext();
                     Tone.start();
                     console.log("audio started");
                 });
