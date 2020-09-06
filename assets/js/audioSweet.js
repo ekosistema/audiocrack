@@ -16,8 +16,7 @@ function audioSweet() {
     document.getElementById("startSweet").addEventListener("click", async () => {
       var context = new AudioContext();
       Tone.start();
-      console.log("context started");
-      console.log("Playback resumed successfully");
+      console.log("audio started");
     });
   }
 

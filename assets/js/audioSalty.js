@@ -1,5 +1,4 @@
 function audioSalty() {
-
   if (true) {
     reproducirSalty();
   }
@@ -13,12 +12,13 @@ function audioSalty() {
   // Start audio Salty
 
   function reproducirSalty() {
-    document.getElementById("startSalty").addEventListener("click", async () => {
-      var context = new AudioContext();
-      Tone.start();
-      console.log("context started");
-      console.log("Playback resumed successfully");
-    });
+    document
+      .getElementById("startSalty")
+      .addEventListener("click", async () => {
+        var context = new AudioContext();
+        Tone.start();
+        console.log("audio started");
+      });
   }
 
   // Assign random number
