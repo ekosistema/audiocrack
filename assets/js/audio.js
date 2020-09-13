@@ -253,7 +253,7 @@ function audioSpicy() {
 
   var loopPiano = (new Tone.Loop((random) => {
     samplerPiano.triggerAttackRelease(
-      "C-1",
+      "C0",
       (random + 0.5) * 8,
       (random + 0.5) * 8
     );
