@@ -88,12 +88,12 @@ function audioSalad() {
   }, 8).start(random * 0.5).loop = true);
 }
 
-//*********************  audio sweet  *******************//
-
 function audioSweet() {
   if (true) {
     reproducirSweet();
   }
+
+  //*********************  audio sweet  *******************//
 
   // Start audio Sweet
 
