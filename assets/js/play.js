@@ -90,10 +90,10 @@ var beat = new Howl({
   volume: 0.2,
   rate: 0.8,
   onplay: function() {
-      this.fade(0,0.2,2000)
+      this.fade(0,0.1,2000)
   },
   onend: function() {
-      this.fade(0.2,0,2000);
+      this.fade(0.1,0,3000);
   }
 });
 
@@ -106,7 +106,7 @@ var guitar = new Howl({
       this.fade(0,0.2,2000)
   },
   onend: function() {
-      this.fade(0.2,0,1000);
+      this.fade(0.2,0,3000);
   }
 });
 
@@ -119,7 +119,7 @@ var piano = new Howl({
       this.fade(0,0.2,2000)
   },
   onend: function() {
-      this.fade(0.2,0,6000);
+      this.fade(0.2,0,8000);
   }
 });
 
