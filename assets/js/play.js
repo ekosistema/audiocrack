@@ -8,7 +8,7 @@
   
   Howler.autoUnlock = false;
 
-  let random = Math.random();
+  let random = 0.1 + Math.random();
 
 //*********************  salad parameters  *******************//
 
