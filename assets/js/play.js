@@ -1,4 +1,14 @@
+  
+/**
+ * Set the parameters for audiocrack algorithmic compositions
+ * @author  Marcos Martí 
+ * {@link https://github.com/ekosistema}
+ * @version 2.0
+ */  
+  
   Howler.autoUnlock = false;
+
+  let random = Math.random();
 
 //*********************  salad parameters  *******************//
 
@@ -6,12 +16,12 @@
     src: ['assets/audio/salad/pads.wav'],
     loop: true,
     volume: 1,
-    rate: 0.8,
+    rate: random * 0.8,
     onplay: function() {
-        this.fade(0,1,2000)
+        this.fade(0,random * 1,2000)
     },
     onend: function() {
-        this.fade(1,0,2000);
+        this.fade(random * 1,0,2000);
     }
   });
 
@@ -19,12 +29,12 @@
     src: ['assets/audio/salad/pasos.wav'],
     loop: true,
     volume: 0.4,
-    rate: 0.3,
+    rate: random * 0.3,
     onplay: function() {
-        this.fade(0,1,2000)
+        this.fade(0,random * 1,2000)
     },
     onend: function() {
-        this.fade(1,0,1000);
+        this.fade(random * 1,0,1000);
     }
   });
 
@@ -32,12 +42,12 @@
     src: ['assets/audio/salad/clicks.wav'],
     loop: true,
     volume: 0.2,
-    rate: 0.3,
+    rate: random * 0.3,
     onplay: function() {
-        this.fade(0,1,2000)
+        this.fade(0,random * 1,2000)
     },
     onend: function() {
-        this.fade(1,0,6000);
+        this.fade(random * 1,0,6000);
     }
   });
 
@@ -47,12 +57,12 @@ var beats = new Howl({
   src: ['assets/audio/sweet/beats.wav'],
   loop: true,
   volume: 0.5,
-  rate: 0.5,
+  rate: random * 0.5,
   onplay: function() {
-      this.fade(0,0.4,2000)
+      this.fade(0,random * 0.5,2000)
   },
   onend: function() {
-      this.fade(0.4,0,2000);
+      this.fade(random * 0.5,0,2000);
   }
 });
 
@@ -60,12 +70,12 @@ var papel = new Howl({
   src: ['assets/audio/sweet/papel.wav'],
   loop: true,
   volume: 0.2,
-  rate: 0.3,
+  rate: random * 0.3,
   onplay: function() {
-      this.fade(0,0.5,2000)
+      this.fade(0,random * 0.5,2000)
   },
   onend: function() {
-      this.fade(1,0.5,1000);
+      this.fade(1,random * 0.5,1000);
   }
 });
 
@@ -73,12 +83,12 @@ var sinte = new Howl({
   src: ['assets/audio/sweet/sinte.wav'],
   loop: true,
   volume: 0.01,
-  rate: 0.5,
+  rate: random * 0.5,
   onplay: function() {
-      this.fade(0,0.3,2000)
+      this.fade(0,random * 0.5,2000)
   },
   onend: function() {
-      this.fade(0.3,0,6000);
+      this.fade(random * 0.5,0,6000);
   }
 });
 
@@ -88,12 +98,12 @@ var beat = new Howl({
   src: ['assets/audio/spicy/beat.wav'],
   loop: true,
   volume: 0.2,
-  rate: 0.8,
+  rate: random * 0.8,
   onplay: function() {
-      this.fade(0,0.1,2000)
+      this.fade(0,random * 0.5,2000)
   },
   onend: function() {
-      this.fade(0.1,0,3000);
+      this.fade(random * 0.5,0,3000);
   }
 });
 
@@ -101,12 +111,12 @@ var guitar = new Howl({
   src: ['assets/audio/spicy/guitar.wav'],
   loop: true,
   volume: 0.2,
-  rate: 0.4,
+  rate: random * 0.8,
   onplay: function() {
-      this.fade(0,0.2,2000)
+      this.fade(random * 0,0.5,2000)
   },
   onend: function() {
-      this.fade(0.2,0,3000);
+      this.fade(random * 0.5,0,3000);
   }
 });
 
@@ -114,12 +124,12 @@ var piano = new Howl({
   src: ['assets/audio/spicy/piano.wav'],
   loop: true,
   volume: 0.2,
-  rate: 0.4,
+  rate: random * 0.8,
   onplay: function() {
-      this.fade(0,0.2,2000)
+      this.fade(0,random * 0.5,2000)
   },
   onend: function() {
-      this.fade(0.2,0,8000);
+      this.fade(random * 0.5,0,8000);
   }
 });
 
@@ -130,20 +140,20 @@ let play = function(name) {
   if (name == 'salad') {
     
     pads.play();
-    pasos.play();
-    clicks.play();
+    setTimeout(() => pasos.play(), random * 10000);
+    setTimeout(() => clicks.play(), random * 20000);
 
 } else if (name == 'sweet') {
     
-    beats.play();
-    papel.play();
     sinte.play();
+    setTimeout(() => papel.play(), random * 10000);
+    setTimeout(() => beats.play(), random * 20000);
 
   } else if (name == 'spicy') {
 
     beat.play();
-    guitar.play();
-    piano.play();
+    setTimeout(() => guitar.play(), random * 10000);
+    setTimeout(() => piano.play(), random * 20000);
 
   }
 
@@ -174,6 +184,6 @@ function detenerAudio(name) {
 
   }
 
-    console.log("Audio stopped");
+    console.log("Audio stopped!");
 
 }
