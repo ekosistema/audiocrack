@@ -185,5 +185,6 @@ function detenerAudio(name) {
   }
 
     console.log("Audio stopped!");
+    location.reload();
 
 }
