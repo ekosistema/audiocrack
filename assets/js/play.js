@@ -3,7 +3,7 @@
  * Set the parameters for audiocrack algorithmic compositions
  * @author  Marcos Martí 
  * {@link https://github.com/ekosistema}
- * @version 2.0
+ * @version 2.1
  */  
   
   Howler.autoUnlock = false;
@@ -13,7 +13,7 @@
 //*********************  salad parameters  *******************//
 
   var pads = new Howl({
-    src: ['assets/audio/salad/pads.wav'],
+    src: ['../assets/audio/salad/pads.wav'],
     loop: true,
     volume: 1,
     rate: random * 0.8,
@@ -26,7 +26,7 @@
   });
 
   var pasos = new Howl({
-    src: ['assets/audio/salad/pasos.wav'],
+    src: ['../assets/audio/salad/pasos.wav'],
     loop: true,
     volume: 0.4,
     rate: random * 0.3,
@@ -39,7 +39,7 @@
   });
 
   var clicks = new Howl({
-    src: ['assets/audio/salad/clicks.wav'],
+    src: ['../assets/audio/salad/clicks.wav'],
     loop: true,
     volume: 0.2,
     rate: random * 0.3,
@@ -53,138 +53,150 @@
 
 //*********************  sweet parameters  *******************//
 
-var beats = new Howl({
-  src: ['assets/audio/sweet/beats.wav'],
-  loop: true,
-  volume: 0.5,
-  rate: random * 0.5,
-  onplay: function() {
-      this.fade(0,random * 0.5,2000)
-  },
-  onend: function() {
-      this.fade(random * 0.5,0,2000);
-  }
-});
+  var beats = new Howl({
+    src: ['../assets/audio/sweet/beat.wav'],
+    loop: true,
+    volume: 0.5,
+    rate: random * 0.5,
+    onplay: function() {
+        this.fade(0,random * 0.5,2000)
+    },
+    onend: function() {
+        this.fade(random * 0.5,0,2000);
+    }
+  });
 
-var papel = new Howl({
-  src: ['assets/audio/sweet/papel.wav'],
-  loop: true,
-  volume: 0.2,
-  rate: random * 0.3,
-  onplay: function() {
-      this.fade(0,random * 0.5,2000)
-  },
-  onend: function() {
-      this.fade(1,random * 0.5,1000);
-  }
-});
+  var papel = new Howl({
+    src: ['../assets/audio/sweet/paper.wav'],
+    loop: true,
+    volume: 0.2,
+    rate: random * 0.3,
+    onplay: function() {
+        this.fade(0,random * 0.5,2000)
+    },
+    onend: function() {
+        this.fade(1,random * 0.5,1000);
+    }
+  });
 
-var sinte = new Howl({
-  src: ['assets/audio/sweet/sinte.wav'],
-  loop: true,
-  volume: 0.01,
-  rate: random * 0.5,
-  onplay: function() {
-      this.fade(0,random * 0.5,2000)
-  },
-  onend: function() {
-      this.fade(random * 0.5,0,6000);
-  }
-});
+  var sinte = new Howl({
+    src: ['../assets/audio/sweet/synth.wav'],
+    loop: true,
+    volume: 0.01,
+    rate: random * 0.5,
+    onplay: function() {
+        this.fade(0,random * 0.5,2000)
+    },
+    onend: function() {
+        this.fade(random * 0.5,0,6000);
+    }
+  });
 
 //*********************  spicy parameters  *******************//
 
-var beat = new Howl({
-  src: ['assets/audio/spicy/beat.wav'],
-  loop: true,
-  volume: 0.2,
-  rate: random * 0.8,
-  onplay: function() {
-      this.fade(0,random * 0.5,2000)
-  },
-  onend: function() {
-      this.fade(random * 0.5,0,3000);
-  }
-});
+  var beat = new Howl({
+    src: ['../assets/audio/spicy/beat.wav'],
+    loop: true,
+    volume: 0.2,
+    rate: random * 0.8,
+    onplay: function() {
+        this.fade(0,random * 0.5,2000)
+    },
+    onend: function() {
+        this.fade(random * 0.5,0,3000);
+    }
+  });
 
-var guitar = new Howl({
-  src: ['assets/audio/spicy/guitar.wav'],
-  loop: true,
-  volume: 0.2,
-  rate: random * 0.8,
-  onplay: function() {
-      this.fade(random * 0,0.5,2000)
-  },
-  onend: function() {
-      this.fade(random * 0.5,0,3000);
-  }
-});
+  var guitar = new Howl({
+    src: ['../assets/audio/spicy/guitar.wav'],
+    loop: true,
+    volume: 0.2,
+    rate: random * 0.8,
+    onplay: function() {
+        this.fade(random * 0,0.5,2000)
+    },
+    onend: function() {
+        this.fade(random * 0.5,0,3000);
+    }
+  });
 
-var piano = new Howl({
-  src: ['assets/audio/spicy/piano.wav'],
-  loop: true,
-  volume: 0.2,
-  rate: random * 0.8,
-  onplay: function() {
-      this.fade(0,random * 0.5,2000)
-  },
-  onend: function() {
-      this.fade(random * 0.5,0,8000);
-  }
-});
+  var piano = new Howl({
+    src: ['../assets/audio/spicy/piano.wav'],
+    loop: true,
+    volume: 0.2,
+    rate: random * 0.8,
+    onplay: function() {
+        this.fade(0,random * 0.5,2000)
+    },
+    onend: function() {
+        this.fade(random * 0.5,0,8000);
+    }
+  });
 
 //*********************  play audio  *******************//
 
-let play = function(name) {
+  let playSalad = function() {
+      
+      this.pads.play();
+      setTimeout(() => this.pasos.play(), random * 10000);
+      setTimeout(() => this.clicks.play(), random * 20000);
+      this.printPlay();
+  }
 
-  if (name == 'salad') {
-    
-    pads.play();
-    setTimeout(() => pasos.play(), random * 10000);
-    setTimeout(() => clicks.play(), random * 20000);
+  let playSweet = function() {
+      
+      this.sinte.play();
+      setTimeout(() => this.papel.play(), random * 10000);
+      setTimeout(() => this.beats.play(), random * 20000);
+      this.printPlay();
+  }
 
-} else if (name == 'sweet') {
-    
-    sinte.play();
-    setTimeout(() => papel.play(), random * 10000);
-    setTimeout(() => beats.play(), random * 20000);
+  let playSpicy = function() {
 
-  } else if (name == 'spicy') {
-
-    beat.play();
-    setTimeout(() => guitar.play(), random * 10000);
-    setTimeout(() => piano.play(), random * 20000);
+      this.beat.play();
+      setTimeout(() => this.guitar.play(), random * 10000);
+      setTimeout(() => this.piano.play(), random * 20000);
+      this.printPlay();
 
   }
 
-  console.log("Audio started!");
-}
+  function printPlay() {
+
+    console.log("Audio started!");
+
+  }  
 
 //*********************  stop audio  *******************//
 
-function detenerAudio(name) {
- 
-  if (name == 'salad') {
-    
-    pads.stop();
-    pasos.stop();
-    clicks.stop();
+  function detenerSalad() {
+      
+      this.pads.stop();
+      this.pasos.stop();
+      this.clicks.stop();
+      this.printDetener();
+  }
 
-} else if (name == 'sweet') {
-    
-    beats.stop();
-    papel.stop();
-    sinte.stop();
-
-  } else if (name == 'spicy') {
-
-    beat.stop();
-    guitar.stop();
-    piano.stop();
+  function detenerSweet() {
+      
+      this.beats.stop();
+      this.papel.stop();
+      this.sinte.stop();
+      this.printDetener();
 
   }
 
-    console.log("Audio stopped!");
-    location.reload();
+  function detenerSpicy() {
 
-}
+      this.beat.stop();
+      this.guitar.stop();
+      this.piano.stop();
+      this.printDetener();
+
+    }
+
+    function printDetener() {
+
+      console.log("Audio stopped!");
+      location.reload();
+
+    }
