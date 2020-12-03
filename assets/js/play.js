@@ -1,6 +1,6 @@
   
 /**
- * Set the parameters for audiocrack algorithmic compositions
+ * audiocrack :: random algorithmic compositions
  * @author  Marcos Martí 
  * {@link https://github.com/ekosistema}
  * @version 2.1
@@ -8,128 +8,128 @@
   
   Howler.autoUnlock = false;
 
-  let random = 0.1 + Math.random();
+  let random = 0.5 + Math.random();
 
 //*********************  salad parameters  *******************//
 
   var pads = new Howl({
-    src: ['../assets/audio/salad/pads.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022380/audiocrack/audio/salad/pads_hqcu9p.wav'],
     loop: true,
     volume: 1,
     rate: random * 0.8,
     onplay: function() {
-        this.fade(0,random * 1,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 1,0,2000);
+        this.fade(random,0,2000);
     }
   });
 
   var pasos = new Howl({
-    src: ['../assets/audio/salad/pasos.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022381/audiocrack/audio/salad/pasos_l2mtmb.wav'],
     loop: true,
     volume: 0.4,
     rate: random * 0.3,
     onplay: function() {
-        this.fade(0,random * 1,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 1,0,1000);
+        this.fade(random,0,1000);
     }
   });
 
   var clicks = new Howl({
-    src: ['../assets/audio/salad/clicks.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022381/audiocrack/audio/salad/clicks_lcgxug.wav'],
     loop: true,
     volume: 0.2,
     rate: random * 0.3,
     onplay: function() {
-        this.fade(0,random * 1,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 1,0,6000);
+        this.fade(random,0,6000);
     }
   });
 
 //*********************  sweet parameters  *******************//
 
   var beats = new Howl({
-    src: ['../assets/audio/sweet/beat.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022380/audiocrack/audio/sweet/beat_livzes.wav'],
     loop: true,
     volume: 0.5,
     rate: random * 0.5,
     onplay: function() {
-        this.fade(0,random * 0.5,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 0.5,0,2000);
+        this.fade(random,0,2000);
     }
   });
 
   var papel = new Howl({
-    src: ['../assets/audio/sweet/paper.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022382/audiocrack/audio/sweet/paper_bdpzu9.wav'],
     loop: true,
     volume: 0.2,
     rate: random * 0.3,
     onplay: function() {
-        this.fade(0,random * 0.5,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(1,random * 0.5,1000);
+        this.fade(1,random,1000);
     }
   });
 
   var sinte = new Howl({
-    src: ['../assets/audio/sweet/synth.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022382/audiocrack/audio/sweet/synth_ltbpld.wav'],
     loop: true,
     volume: 0.01,
     rate: random * 0.5,
     onplay: function() {
-        this.fade(0,random * 0.5,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 0.5,0,6000);
+        this.fade(random,0,6000);
     }
   });
 
 //*********************  spicy parameters  *******************//
 
   var beat = new Howl({
-    src: ['../assets/audio/spicy/beat.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022379/audiocrack/audio/spicy/beat_iadent.wav'],
     loop: true,
     volume: 0.2,
     rate: random * 0.8,
     onplay: function() {
-        this.fade(0,random * 0.5,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 0.5,0,3000);
+        this.fade(random,0,3000);
     }
   });
 
   var guitar = new Howl({
-    src: ['../assets/audio/spicy/guitar.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022380/audiocrack/audio/spicy/guitar_uj0yzc.wav'],
     loop: true,
     volume: 0.2,
     rate: random * 0.8,
     onplay: function() {
-        this.fade(random * 0,0.5,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 0.5,0,3000);
+        this.fade(random,0,3000);
     }
   });
 
   var piano = new Howl({
-    src: ['../assets/audio/spicy/piano.wav'],
+    src: ['https://res.cloudinary.com/dvw01wakw/video/upload/v1607022379/audiocrack/audio/spicy/piano_unvh3k.wav'],
     loop: true,
     volume: 0.2,
     rate: random * 0.8,
     onplay: function() {
-        this.fade(0,random * 0.5,2000)
+        this.fade(0,random,2000)
     },
     onend: function() {
-        this.fade(random * 0.5,0,8000);
+        this.fade(random,0,8000);
     }
   });
 
