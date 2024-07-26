@@ -1,1 +1,53 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="algorithmic compositions"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>audiocrack</title><meta name="description" content="algorithmic compositions"/><meta property="og:title" content="audiocrack"/><meta property="og:description" content="algorithmic compositions"/><meta property="og:type" content="text/html"/><meta property="og:image" content="https://crack.marcosmarti.org/cover.jpg"/><meta property="og:image:alt" content="audiocrack logo"/><meta property="og:image:type" content="image/webp"/><meta property="og:url" content="https://crack.marcosmarti.org"/><script defer="defer" src="/static/js/main.2468f7de.js"></script><link href="/static/css/main.d392e128.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>"serviceWorker"in navigator&&window.addEventListener("load",(function(){navigator.serviceWorker.register("/sw.js")}))</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="algorithmic compositions made with love">
+    <title>audiocrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/logo512.png">
+
+        <!-- Meta etiquetas de Open Graph -->
+    <meta property="og:title" content="audiocrack">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crack.celerolab.com/">
+    <meta property="og:image" content="https://crack.celerolab.com/cover.jpg">
+    <meta property="og:description" content="algorithmic compositions made with love">
+    <meta property="og:site_name" content="audiocrack">
+    <meta property="og:locale" content="en_EN">
+
+</head>
+<body>
+    <div class="content">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>audiocrack</h1>
+        <p class="description">algorithmic compositions</p>
+        <div class="button-container">
+            <button id="playButton" class="button play">play</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>coded with &nbsp;<i class="fas fa-heart"></i>&nbsp; by 
+            <a href="https://celerolab.com" target="_blank">celerolab</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.8.26/build/Tone.min.js"></script>
+    <script src="js/player.js"></script>
+</body>
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+    </script>
+    
+</html>
+
